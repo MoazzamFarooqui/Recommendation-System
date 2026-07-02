@@ -108,8 +108,3 @@ This project uses the **TMDB 5000 Movie Dataset**.
 
 ---
 
-## Acknowledgements
-
-- TMDB for providing movie metadata and poster images.
-- Scikit-learn for TF-IDF vectorization and cosine similarity.
-- Streamlit for the web application framework.
