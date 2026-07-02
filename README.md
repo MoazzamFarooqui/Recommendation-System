@@ -1,7 +1,6 @@
 # Movie Recommendation System
 
-A content-based movie recommendation system built with Python and Streamlit. The application recommends movies similar to a user's selection by analyzing movie metadata such as genres, keywords, cast, and director.
-Recommendations are generated using TF-IDF vectorization and cosine similarity, while movie posters are retrieved dynamically through the TMDB API.
+A content-based movie recommendation system built with Python and Streamlit. The application recommends movies similar to a user's selection by analyzing movie metadata such as genres, keywords, cast, and director. Recommendations are generated using TF-IDF vectorization and cosine similarity, while movie posters are retrieved dynamically through the TMDB API.
 
 ---
 
@@ -11,7 +10,7 @@ Recommendations are generated using TF-IDF vectorization and cosine similarity, 
 - Interactive web interface built with Streamlit
 - Top 10 similar movie suggestions
 - Movie posters fetched using the TMDB API
-- Fast recommendation generation using a precomputed similarity matrix
+- Efficient recommendation generation using a precomputed similarity matrix
 
 ---
 
@@ -45,14 +44,22 @@ These features are combined into a single text representation (`tags`) for each 
 
 The recommendation pipeline consists of:
 
-1. **Feature Engineering**
-   - Combines genres, keywords, cast, and director into a single feature.
+- **Feature Engineering** – Combines genres, keywords, cast, and director into a single feature.
+- **TF-IDF Vectorization** – Converts textual movie features into numerical vectors while assigning greater importance to distinctive terms.
+- **Cosine Similarity** – Computes similarity scores between movie vectors to identify the most relevant recommendations.
 
-2. **TF-IDF Vectorization**
-   - Converts textual movie features into numerical vectors while assigning greater importance to distinctive terms.
+---
 
-3. **Cosine Similarity**
-   - Computes similarity scores between movie vectors to identify the most relevant recommendations.
+## Workflow
+
+1. Load and preprocess the movie dataset.
+2. Combine genres, keywords, cast, and director into a single `tags` feature.
+3. Convert the textual data into TF-IDF vectors.
+4. Compute pairwise cosine similarity between all movies.
+5. Store the similarity matrix for efficient retrieval.
+6. Accept a movie selected by the user.
+7. Retrieve the most similar movies based on similarity scores.
+8. Fetch movie posters using the TMDB API and display the recommendations.
 
 ---
 
@@ -94,32 +101,15 @@ streamlit run app.py
 
 ## Dataset
 
-This project uses the TMDB 5000 Movie Dataset.
+This project uses the **TMDB 5000 Movie Dataset**.
 
 - `tmdb_5000_movies.csv`
 - `tmdb_5000_credits.csv`
 
 ---
 
-## Workflow
-
-```
-
-1. Load and preprocess the movie dataset.
-2. Combine genres, keywords, cast, and director into a single `tags` feature.
-3. Convert the textual data into TF-IDF vectors.
-4. Compute pairwise cosine similarity between all movies.
-5. Store the similarity matrix for efficient retrieval.
-6. Accept a movie selected by the user.
-7. Retrieve the most similar movies based on similarity scores.
-8. Fetch movie posters using the TMDB API and display the recommendations.
-
-```
-
 ## Acknowledgements
 
 - TMDB for providing movie metadata and poster images.
 - Scikit-learn for TF-IDF vectorization and cosine similarity.
 - Streamlit for the web application framework.
-
----
