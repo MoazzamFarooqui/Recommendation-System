@@ -6,7 +6,7 @@ A content-based movie recommendation system built with Python and Streamlit. The
 
 ## Application Preview
 
-<img width="762" height="453" alt="image" src="https://github.com/user-attachments/assets/4911c8b1-6295-402d-b54a-4e20db883ded" />
+<img width="767" height="446" alt="image" src="https://github.com/user-attachments/assets/ee67459f-54de-4fa1-b38e-ae7fada22557" />
 
 ---
 
