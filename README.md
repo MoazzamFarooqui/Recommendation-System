@@ -78,13 +78,13 @@ The recommendation pipeline consists of:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/movie-recommendation-system.git
+git clone https://github.com/MoazzamFarooqui/Recommendation-System.git
 ```
 
 ### Navigate to the project directory
 
 ```bash
-cd movie-recommendation-system
+cd Recommendation-System
 ```
 
 ### Install the required dependencies
@@ -117,4 +117,5 @@ This project uses the **TMDB 5000 Movie Dataset**.
 - `tmdb_5000_credits.csv`
 
 ---
+
 
